@@ -3,17 +3,16 @@ import { defineConfig } from "vite";
 import path from "path";
 
 export default defineConfig({
-  root: "src",
   build: {
-    outDir: "../dist",
+    outDir: "dist",
     emptyOutDir: true,
     sourcemap: true,
-    minify: "esbuild", // Use esbuild for minification (default)
+    minify: "oxc",
     assetsDir: "assets",
     rollupOptions: {
-      input: path.resolve(__dirname, "src/index.html"),
+      input: path.resolve(__dirname, "index.html"),
       output: {
-        assetFileNames: "assets/[name]-[hash][extname]", // Hashing for cache busting
+        assetFileNames: "assets/[name]-[hash][extname]",
       },
     },
   },
