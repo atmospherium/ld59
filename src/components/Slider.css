@@ -1,0 +1,43 @@
+.sliderGroup {
+  position: sticky;
+  background-color: #16171da9;
+  z-index: 1000;
+
+  &.horizontal {
+    width: 100%;
+    top: 10px;
+    padding: 5px;
+  }
+  &.vertical {
+    transform: rotate(270deg);
+  }
+  &.right {
+    top: 100px;
+    margin-right: -1200px;
+  }
+  &.left {
+    top: 100px;
+    margin-left: -1200px;
+  }
+  input[type="range"] {
+    /* width: 300px; */
+    height: 5px;
+    padding: 0;
+    border-radius: 2px;
+    outline: none;
+    cursor: pointer;
+
+    &.low {
+      accent-color: black;
+    }
+    &.medium {
+      accent-color: rgb(0, 32, 0);
+    }
+    &.high {
+      accent-color: rgb(0, 64, 0);
+    }
+    &.match {
+      accent-color: rgb(0, 255, 0);
+    }
+  }
+}
