@@ -17,11 +17,13 @@ import { end } from "./narrative/end.data";
 import { story6 } from "./narrative/Story6.data";
 
 export const App = () => {
-  const collectedItems = useGameContext((state) => state.collectedItems);
+  const _collectedItems = useGameContext((state) => state.collectedItems);
   const checkpoints = useGameContext((state) => state.checkpoints);
   const slider1 = useGameContext((state) => state.slider1);
   const slider2 = useGameContext((state) => state.slider2);
   const slider3 = useGameContext((state) => state.slider3);
+
+  const collectedItems = _collectedItems.sort((a, b) => a.localeCompare(b));
 
   return (
     <>
